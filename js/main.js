@@ -80,8 +80,8 @@ posts.forEach(sezioni => {
                                     <div class="post__footer">
                                         <div class="likes js-likes">
                                             <div class="likes__cta">
-                                                <a class="like-button  js-like-button" href="#" data-postid="${sezioni["id"]}">
-                                                    <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                                                <a class="like-button js-like-button" href="#" data-postid="${sezioni["id"]}">
+                                                    <i id="prova" class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                                                     <span class="like-button__label">Mi Piace</span>
                                                 </a>
                                             </div>
@@ -92,5 +92,14 @@ posts.forEach(sezioni => {
                                     </div>            
                                 </div>`
 
+console.log(containerPost);
+});
 
+const likeBtn = document.querySelector('.like-button');
+
+console.log(likeBtn);
+
+likeBtn.addEventListener('click',
+    function(){
+        document.querySelector('.like-button').style.color = "blue";
 });
